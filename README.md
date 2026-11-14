@@ -1,5 +1,7 @@
 # Biblioteca demo
 
+[Ver el video de presentación del examen en YouTube](https://youtu.be/BejODACHU3I).
+
 Web App de consulta de un libro ficticio. Docker Compose ejecuta dos servicios a partir de la misma imagen Python. **web** sirve HTML y obtiene el título de **catalog**. Solo web publica un puerto y lo liga al loopback del host. Ambos procesos usan un usuario sin privilegios.
 
 ## Ejecutar y demostrar
