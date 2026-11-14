@@ -1,0 +1,19 @@
+services:
+  catalog:
+    image: biblioteca-demo:local
+    build: .
+    networks: [backend]
+  web:
+    image: biblioteca-demo:local
+    build: .
+    environment:
+      CATALOG_URL: http://catalog:8080/book
+    depends_on:
+      - catalog
+    ports:
+      - "127.0.0.1:${WEB_PORT:-8080}:8080"
+    networks: [frontend, backend]
+networks:
+  frontend:
+  backend:
+    internal: true
