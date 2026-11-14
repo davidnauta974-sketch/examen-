@@ -19,7 +19,7 @@ El [workflow](.github/workflows/devsecops.yml) se ejecuta al enviar cambios a `m
 
 1. **verify** valida Compose y prueba salud, consulta real al catálogo y respuesta 404.
 2. **build** construye la imagen con la etiqueta del commit y la exporta como artefacto para el siguiente job.
-3. **publish** recupera la misma imagen, se autentica con el token temporal del workflow y la publica en `ghcr.io/propietario/repositorio:<sha>`. El permiso de escritura en Packages se concede solo a este job.
+3. **publish** recupera la misma imagen, se autentica con el token temporal del workflow y la publica en `ghcr.io/propietario/biblioteca-demo:<sha>`. El permiso de escritura en Packages se concede solo a este job.
 
 La evidencia de ejecución está en la pestaña **Actions** del repositorio. Abre la corrida del commit entregado y el log de **publish** para ver el digest. En **Packages**, abre la versión etiquetada con ese SHA. Si el paquete es privado, concede al docente acceso de lectura o haz visible el paquete de la demo.
 
